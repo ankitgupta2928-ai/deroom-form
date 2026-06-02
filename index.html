@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Google Form Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* Pointing directly to your local file in the folder */
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 640px; 
+            padding: 20px;
+            box-sizing: border-box;
+            
+            /* Deletes the white card background panels of the Google Form */
+            mix-blend-mode: multiply; 
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="form-wrapper">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeRogy1mvZAhirL7hvcTaGFKgouS0tYtvJWvDwGQFqpv29YrA/viewform?embedded=true" 
+            height="800" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">Loading…
+        </iframe>
+    </div>
+
+</body>
+</html>
