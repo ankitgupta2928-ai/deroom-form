@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transparent Google Form Test</title>
+    <title>De' Room x Locked-In Form</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            /* Pointing directly to your local file in the folder */
             background-image: url('background.jpg'); 
             background-size: cover;
             background-position: center;
@@ -21,29 +20,37 @@
             min-height: 100vh;
         }
 
-        .form-wrapper {
+        .form-container {
             width: 100%;
-            max-width: 640px; 
-            padding: 20px;
+            max-width: 660px; 
+            margin: 40px 20px;
+            padding: 10px;
             box-sizing: border-box;
             
-            /* Deletes the white card background panels of the Google Form */
-            mix-blend-mode: multiply; 
+            /* Glassmorphism style: Creates a clean glass pane effect over your concrete image */
+            background: rgba(255, 255, 255, 0.45); 
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         iframe {
             width: 100%;
             border: none;
             display: block;
+            border-radius: 12px;
         }
     </style>
 </head>
 <body>
 
-   <div class="form-wrapper">
+    <div class="form-container">
+        <!-- Make sure to keep your Google Form URL in the src quotes below -->
         <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeRogy1mvZAhirL7hvcTaGFKgouS0tYtvJWvDwGQFqpv29YrA/viewform?embedded=true" 
-            height="800" 
+            src="https://google.com" 
+            height="950" 
             frameborder="0" 
             marginheight="0" 
             marginwidth="0">Loading…
