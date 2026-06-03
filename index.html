@@ -8,7 +8,8 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('background.jpg'); 
+            /* Using your concrete asset as the fixed background cover */
+            background-image: url('image_f4ac1d.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -24,33 +25,29 @@
             width: 100%;
             max-width: 660px; 
             margin: 40px 20px;
-            padding: 10px;
             box-sizing: border-box;
             
-            /* Glassmorphism style: Creates a clean glass pane effect over your concrete image */
-            background: rgba(255, 255, 255, 0.45); 
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            /* Clean drop shadow to lift the form off the concrete texture */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* Clean rounded edges on the frame */
         }
 
         iframe {
             width: 100%;
+            /* Increased height to make sure the header + all questions render completely */
+            height: 1200px; 
             border: none;
             display: block;
-            border-radius: 12px;
+            background: #ffffff;
         }
     </style>
 </head>
 <body>
 
     <div class="form-container">
-        <!-- Make sure to keep your Google Form URL in the src quotes below -->
         <iframe 
             src="https://docs.google.com/forms/d/e/1FAIpQLSeRogy1mvZAhirL7hvcTaGFKgouS0tYtvJWvDwGQFqpv29YrA/viewform?embedded=true"
-            height="950" 
             frameborder="0" 
             marginheight="0" 
             marginwidth="0">Loading…
